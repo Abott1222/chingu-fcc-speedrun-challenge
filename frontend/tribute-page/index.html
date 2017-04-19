@@ -1,0 +1,43 @@
+<!--
+About: A tribute website to B. F. Skinner made for Free Code Camp as part of P1xt Speedrun.
+
+Author: Zyberg
+Last Updated: 2017-04-19
+-->
+
+
+<DOCTYPE! html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Tribute to Burrhus Frederic Skinner">
+    <meta name="keywords" content="Tribute, Skinner, FCC">
+    <meta name="author" content="Zyberg">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script src="vue.js"></script>
+    <script src="script.js"></script>
+
+    <title>Tribute to B. F. Skinner</title>
+</head>
+<body>
+    <div id="app">
+        <div id="nailBox">
+             <div id="nail1"></div>
+             <div id="nail2"></div>
+        </div>
+        
+        <h1> {{ name }} </h1>
+        <img src="http://www.nndb.com/people/297/000022231/bf-skinner-sm.jpg">
+        
+        <ol>
+            <li v-for="achievement in lifetime">
+                <h3> {{ achievement.title }} </h3>
+                <span> {{ achievement.date }} </span>
+                <p v-html="achievement.text"></p>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
